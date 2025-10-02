@@ -2,7 +2,7 @@ class AojCli < Formula
   desc "Command-line interface for Aizu Online Judge (AOJ)"
   homepage "https://github.com/YuminosukeSato/AOJ-cli"
   url "https://github.com/YuminosukeSato/AOJ-cli/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  sha256 "178ad9c7842f1fd6b8c9dd820f4cafb3bafbc4b1ad68b94fab7fa00da8223403"
   license "MIT"
   head "https://github.com/YuminosukeSato/AOJ-cli.git", branch: "main"
 
