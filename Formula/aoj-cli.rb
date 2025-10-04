@@ -1,8 +1,8 @@
 class AojCli < Formula
-  desc "Command-line interface for Aizu Online Judge (AOJ)"
+  desc "CLI tool for Aizu Online Judge with init and submit commands"
   homepage "https://github.com/YuminosukeSato/AOJ-cli"
-  url "https://github.com/YuminosukeSato/AOJ-cli/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "178ad9c7842f1fd6b8c9dd820f4cafb3bafbc4b1ad68b94fab7fa00da8223403"
+  url "https://github.com/YuminosukeSato/AOJ-cli/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "55e5b38010667dea8dca45e1d68d12102d0c7d41a8e38918f419509dd2f43873"
   license "MIT"
   head "https://github.com/YuminosukeSato/AOJ-cli.git", branch: "main"
 
@@ -16,7 +16,10 @@ class AojCli < Formula
     # Test the binary exists and runs
     assert_match "AOJ CLI", shell_output("#{bin}/aoj --help")
 
-    # Test basic functionality without requiring network
-    assert_match "Usage:", shell_output("#{bin}/aoj --help")
+    # Test init command is available
+    assert_match "init", shell_output("#{bin}/aoj --help")
+
+    # Test submit command is available
+    assert_match "submit", shell_output("#{bin}/aoj --help")
   end
 end
